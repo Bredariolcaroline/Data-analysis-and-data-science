@@ -1,3 +1,14 @@
+import matplotlib.pyplot as plt
+from matplotlib.colors import ListedColormap
+from matplotlib.ticker import PercentFormatter
+import seaborn as sns
+from sklearn.cluster import KMeans
+from sklearn.metrics import silhouette_score
+import os
+import numpy as np
+
+
+
 def inspect_outliers(dataframe, column, whisker_width=1.5):
     """Função para inspecionar outliers.
 
@@ -25,3 +36,8 @@ def inspect_outliers(dataframe, column, whisker_width=1.5):
     return dataframe[
         (dataframe[column] < lower_bound) | (dataframe[column] > upper_bound)
     ]
+
+
+
+
+
